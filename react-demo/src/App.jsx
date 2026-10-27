@@ -1,16 +1,18 @@
-
-import StudentCard from './studentcard'
+import { useState } from 'react'
 
 function App() {
-  let name = "gaurav"
+  const [count, setCount] = useState(0)
+
+  function handleClick() {
+    setCount(count + 1)
+  }
+
   return (
     <div>
-      <div>
-      <h1>Hello React {name}</h1>
-      <StudentCard name="gaurav" email="gaurav@example.com" />
-      <StudentCard name="john" email="john@example.com" />
-      <StudentCard name2="monika"/>
-      </div>
+      <p>You clicked {count} times</p>
+      <button onClick={handleClick}>
+        Click me
+      </button> 
     </div>
   )
 }
