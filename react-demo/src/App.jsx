@@ -8,7 +8,7 @@ function App() {
   const [flag, setFlag] = useState(false);
   useEffect(() => {
     console.log("useEffect called");
-  },[flag])
+  },[flag]);
   return (
     <div className="App">
       <h1>hello we are learning forms</h1>
